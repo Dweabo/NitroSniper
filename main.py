@@ -1,6 +1,7 @@
 from colorama import Fore, init, Style
 
 
+import requests
 from discord.ext import commands
 import discord
 
@@ -18,6 +19,7 @@ token = 'mfa.kpTx9RILhvjZon7cikaohNRVrdbN63IE47g8My1UUGjYZr9oX7WTmlPyAXxw430uZpk
 async def on_connect():
     print(Fore.GREEN+"=> Started FREESNIPER v2.0 by Dweeb")
     print(Fore.WHITE+"=> Listening for Nitro Gifts")
+    await client.change_presence(activity=discord.Streaming(name=":)", url='https://www.twitch.tv/'))
 
 
 @client.event
