@@ -1,6 +1,6 @@
 from colorama import Fore, init, Style
 
-
+import urllib3
 import requests
 from discord.ext import commands
 import discord
@@ -9,6 +9,7 @@ import discord
 client = commands.Bot(command_prefix='.', self_bot=True)
 init(autoreset=True, convert=True)
 client.remove_command('help')
+urllib3.disable_warnings()
 
 token = 'mfa.kpTx9RILhvjZon7cikaohNRVrdbN63IE47g8My1UUGjYZr9oX7WTmlPyAXxw430uZpkiSxZ7vdImlW_Wfo_G'
 
