@@ -8,6 +8,7 @@ client = discord.Client()
 @client.event
 async def on_connect():
     print("ready")
+    await client.change_presence(activity=discord.Streaming(name=":3", url='https://www.twitch.tv/'))
 
 
 
