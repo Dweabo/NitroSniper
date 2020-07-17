@@ -2,7 +2,7 @@ import discord
 import datetime
 import requests
 
-token = "mfa.kpTx9RILhvjZon7cikaohNRVrdbN63IE47g8My1UUGjYZr9oX7WTmlPyAXxw430uZpkiSxZ7vdImlW_Wfo_G" #Replace with discord token
+token = "mfa.1OrGB9TCJLY-wZKq0sCwI-alNU4ZzYvBOmssr_E60MccHBjOsHj1_qJlKVKQBsAp5qgPzwWJTog18OBiwEEu" #Replace with discord token
 client = discord.Client()
 
 @client.event
