@@ -10,15 +10,19 @@ client = discord.Client()
 async def on_connect():
     x=1
     while True:
-            await client.change_presence(activity=discord.Streaming(name="H", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Streaming(name="3.1", url='https://www.twitch.tv/'))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="He", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Streaming(name="3.141", url='https://www.twitch.tv/'))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="Hel", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Streaming(name="3.14159", url='https://www.twitch.tv/'))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="Hell", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Streaming(name="3.1415926", url='https://www.twitch.tv/'))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="Hello", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Streaming(name="3.141592653", url='https://www.twitch.tv/'))
+            await asyncio.sleep(5)
+            await client.change_presence(activity=discord.Streaming(name="3.141592653589", url='https://www.twitch.tv/'))
+            await asyncio.sleep(5)
+            await client.change_presence(activity=discord.Streaming(name="3.141592653589793", url='https://www.twitch.tv/'))
             x += 1
     print("ready")
 
