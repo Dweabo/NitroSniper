@@ -1,6 +1,7 @@
 import discord
 import datetime
 import requests
+import asyncio
 
 token = "mfa.1OrGB9TCJLY-wZKq0sCwI-alNU4ZzYvBOmssr_E60MccHBjOsHj1_qJlKVKQBsAp5qgPzwWJTog18OBiwEEu" #Replace with discord token
 client = discord.Client()
@@ -8,7 +9,16 @@ client = discord.Client()
 @client.event
 async def on_connect():
     print("ready")
-    await client.change_presence(activity=discord.Streaming(name=":3", url='https://www.twitch.tv/'))
+    await client.change_presence(activity=discord.Streaming(name="H", url='https://www.twitch.tv/'))
+    await asyncio.sleep(5)
+    await client.change_presence(activity=discord.Streaming(name="He", url='https://www.twitch.tv/'))
+    await asyncio.sleep(5)
+    await client.change_presence(activity=discord.Streaming(name="Hel", url='https://www.twitch.tv/'))
+    await asyncio.sleep(5)
+    await client.change_presence(activity=discord.Streaming(name="Hell", url='https://www.twitch.tv/'))
+    await asyncio.sleep(5)
+    await client.change_presence(activity=discord.Streaming(name="Hello", url='https://www.twitch.tv/'))
+
 
 
 
