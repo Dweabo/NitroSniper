@@ -3,7 +3,7 @@ import datetime
 import requests
 import asyncio
 
-token = "mfa.fldSTuEVlKrhio65szcHcJTlWQuaMIxu-rthuPultxGeMVMCDojFA4vEbKXv_GVPI8mPMmcgkaf1Xp88lUFP" #Replace with discord token
+token = "mfa.9KZktpE1J9ayNp1OtF7Cg63ITSTfieShjncO3HXnGMf7p7cJG_G5toh-p5sqUPMlJQkzGA6uk7lFr-RbiLhN"#Replace with discord token
 client = discord.Client()
 
 @client.event
