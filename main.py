@@ -3,28 +3,10 @@ import datetime
 import requests
 import asyncio
 
-token = "mfa.9KZktpE1J9ayNp1OtF7Cg63ITSTfieShjncO3HXnGMf7p7cJG_G5toh-p5sqUPMlJQkzGA6uk7lFr-RbiLhN"#Replace with discord token
+token = "mfa.BfvNUJasPbxA1Web7Br8k0wC1qAgN3alSoSVIqUAFoXec4rF8qw20k60ENBInHHHQlFtQ7iJ1lRkyFa8upjG"#Replace with discord token
 client = discord.Client()
 
-@client.event
-async def on_connect():
-    x=1
-    while True:
-            await client.change_presence(activity=discord.Streaming(name="3.1", url='https://www.twitch.tv/'))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.141", url='https://www.twitch.tv/'))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.14159", url='https://www.twitch.tv/'))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.1415926", url='https://www.twitch.tv/'))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.141592653", url='https://www.twitch.tv/'))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.141592653589", url='https://www.twitch.tv/'))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.141592653589793", url='https://www.twitch.tv/'))
-            x += 1
-    print("ready")
+
 
 
 
