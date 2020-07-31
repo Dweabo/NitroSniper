@@ -26,10 +26,6 @@ async def on_connect():
             await client.change_presence(activity=discord.Streaming(name="3.14159265", url='https://www.twitch.tv/'))
             await asyncio.sleep(5)
             await client.change_presence(activity=discord.Streaming(name="3.141592653", url='https://www.twitch.tv/'))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.1415926535", url='https://www.twitch.tv/'))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.14159265359", url='https://www.twitch.tv/'))
             x += 1
     print("Ready")
 
