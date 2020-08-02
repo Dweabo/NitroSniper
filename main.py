@@ -3,36 +3,36 @@ import datetime
 import requests
 import asyncio
 
-token = "mfa.6XrQjdpoBJIAKw3oPL05jddkMot70MuBIgcjx_1GMy-CrzUWze4gr7AEoF5JCoz_gaRc5WMO1uSx1csravMu"#Replace with discord token
+token = "mfa.6XrQjdpoBJIAKw3oPL05jddkMot70MuBIgcjx_1GMy-CrzUWze4gr7AEoF5JCoz_gaRc5WMO1uSx1csravMu" #Replace with discord token
 client = discord.Client()
-
 
 @client.event
 async def on_connect():
     x=1
-    while True:
-            await client.change_presence(activity=discord.Streaming(name="3.14", url='https://www.twitch.tv/'))
+    while True: #Change status
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.1"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.141", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.14"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.1415", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.141"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.14159", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.1415"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.141592", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.14159"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.1415926", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.141592"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.14159265", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.1415926"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Streaming(name="3.141592653", url='https://www.twitch.tv/'))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.14159265"))
+            await asyncio.sleep(5)
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.141592653"))
             x += 1
     print("Ready")
 
 
-
 @client.event
-async def on_message(message):
+async def on_message(message): # Sniper itself
     if "discord.gift/" in message.content:
         print("Found Nitro Gift")
 
