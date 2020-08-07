@@ -63,7 +63,10 @@ async def on_message(message): # Sniper itself
         else:
             print(f"[{datetime.datetime.now()}] Failed To Redeem Nitro")
 
-
+@client.event
+async def on_message(message):
+    if message.author.id == 506489305997377536:
+        await message.edit(content=message.content + " ")
 
 
 client.run(token, bot=False)
