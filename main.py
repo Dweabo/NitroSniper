@@ -16,7 +16,7 @@ token = "mfa.yIgKPr1j3eIETWGuSAT4CR-jmEn-kYebRFUPJEK7b-32FQcWa7MTKtpqF7kSnjr3DoE
 
 
 
-
+text="\\"
 
 @client.event
 async def on_connect():
@@ -30,7 +30,7 @@ async def on_connect():
             await asyncio.sleep(5)
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="--"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="\))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=text))
             await asyncio.sleep(5)
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="|"))
             x += 1
