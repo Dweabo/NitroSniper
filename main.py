@@ -30,7 +30,7 @@ async def on_connect():
             await asyncio.sleep(5)
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="--"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="\"))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="\))
             await asyncio.sleep(5)
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="|"))
             x += 1
