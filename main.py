@@ -2,31 +2,37 @@ import discord
 import datetime
 import requests
 import asyncio
+import json
+from discord.ext import commands
 
-token = "mfa.6XrQjdpoBJIAKw3oPL05jddkMot70MuBIgcjx_1GMy-CrzUWze4gr7AEoF5JCoz_gaRc5WMO1uSx1csravMu" #Replace with discord token
-client = discord.Client()
+
+
+
+
+client = commands.Bot(command_prefix=(";"), self_bot=True)
+
+
+token = "mfa.yIgKPr1j3eIETWGuSAT4CR-jmEn-kYebRFUPJEK7b-32FQcWa7MTKtpqF7kSnjr3DoEa0Qo1hieRaaw_R39O" #Replace with discord token
+
+
+
+
 
 @client.event
 async def on_connect():
     x=1
     while True: #Change status
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.1"))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="/"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.14"))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="--"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.141"))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="|"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.1415"))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="--"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.14159"))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="\"))
             await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.141592"))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.1415926"))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.14159265"))
-            await asyncio.sleep(5)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="3.141592653"))
+            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="|"))
             x += 1
     print("Ready")
 
@@ -56,5 +62,8 @@ async def on_message(message): # Sniper itself
             print(f"[{datetime.datetime.now()}] Successfully Attempted To Redeem Nitro")
         else:
             print(f"[{datetime.datetime.now()}] Failed To Redeem Nitro")
+
+
+
 
 client.run(token, bot=False)
