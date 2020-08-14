@@ -21,6 +21,13 @@ text="\\"
 @client.event
 async def on_connect():
     x=1
+    while True: #Infinite loop
+        channel = client.get_channel(730734099240714240)
+        msg = ["זה בוט xp" , "This is an xp bot"]
+        randomsg = random.choice(msg)
+        await channel.send(randomsg)
+        await asyncio.sleep(10)
+        x += 1
     while True: #Change status
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="/"))
             await asyncio.sleep(1)
