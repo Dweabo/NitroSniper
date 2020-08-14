@@ -3,7 +3,6 @@ import datetime
 import requests
 import asyncio
 import json
-import random
 from discord.ext import commands
 
 
@@ -36,20 +35,6 @@ async def on_connect():
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="|"))
             x += 1
     print("Ready")
-
-
-@client.event
-async def on_connect(): #xp bot :)
-    x=1
-    while True: #Infinite loop
-        channel = client.get_channel(730734099240714240)
-        msg = ["this is an xp bot" , "זה בוט xp"]
-        randomsg = random.choice(msg)
-        await channel.send(randomsg)
-        await asyncio.sleep(10)
-        x += 1
-
-
 
 
 
