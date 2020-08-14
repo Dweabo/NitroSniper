@@ -20,6 +20,7 @@ text="\\"
 
 @client.event
 async def on_connect():
+    x=1
     while True: #Change status
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="/"))
             await asyncio.sleep(1)
