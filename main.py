@@ -12,10 +12,10 @@ from discord.ext import commands
 client = commands.Bot(command_prefix=(";"), self_bot=True)
 
 
-token = "mfa.U3IyS-PTjeGJE2DzyG60fGJrKQ7ZFlhh44rIv_IBK8XqwZ2UcBK0TPKQK4Isrwih2lSpgdUGRT7ZkCaAG9cy" #Replace with discord token
+token = "mfa.PyaTh_56T2PcxjqBC00El7IKnD-DideX9-FEOg0kw4QUUIPnaxRl3yCpwwsNgAZ-pwtjSihKXVtAVhF1ZXcl" #Replace with discord token
 
 
-
+"""
 text="\\"
 
 @client.event
@@ -35,8 +35,7 @@ async def on_connect():
             await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="|"))
             x += 1
     print("Ready")
-
-
+"""
 
 
 @client.event
