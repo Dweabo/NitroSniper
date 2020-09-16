@@ -12,7 +12,7 @@ from discord.ext import commands
 client = commands.Bot(command_prefix=(";"), self_bot=True)
 
 
-token = "mfa.PyaTh_56T2PcxjqBC00El7IKnD-DideX9-FEOg0kw4QUUIPnaxRl3yCpwwsNgAZ-pwtjSihKXVtAVhF1ZXcl" #Replace with discord token
+token = "mfa.iiCwd2LbHK59AwUXZmAsBjHaKsM3WmxXr8GRNVVMsovgDrlcNbK1dSf4YbtSRzEDEsAzkgE4x0u9Bhqo7qTj" #Replace with discord token
 
 
 """
