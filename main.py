@@ -2,68 +2,44 @@ import discord
 import datetime
 import requests
 import asyncio
-import json
-from discord.ext import commands
 
+token = "mfa.whJDn1WLNXX1Cfxkl-FeHDKR8bslKSgcvlpiBjE2i8gCxS8iWKEwmTzWQ-3O2wiNaLaCAwuLLCBNtmREb3MN"
 
+ #Replace with discord token
 
+client = discord.Client()
 
+#
+#@client.event # Twitch streaming status
+#async def on_connect():
+#    print('Ready')
+#    await client.change_presence(activity=discord.Streaming(name="...", url='https://www.twitch.tv/not_streaming_lmao_suck_it'))
 
-client = commands.Bot(command_prefix=(";"), self_bot=True)
-
-
-token = "mfa.q5w47P8pPXE5gmMdUd05d4VG2tz_2c3aK8kONG_KVkMKbsl7VPAfw4_ep0Ae3dXJjKGxhRmA71mNY8zxSg38" #Replace with discord token
-
-
-"""
-text="\\"
-
-@client.event
-async def on_connect():
-    x=1
-    while True: #Change status
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="/"))
-            await asyncio.sleep(1)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="-"))
-            await asyncio.sleep(1)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="|"))
-            await asyncio.sleep(1)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="-"))
-            await asyncio.sleep(1)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=text))
-            await asyncio.sleep(1)
-            await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="|"))
-            x += 1
-    print("Ready")
-"""
-
-
-@client.event
-async def on_message(message): # Sniper itself
+@client.event # Main event
+async def on_message(message):
     if "discord.gift/" in message.content:
-        print("Found Nitro Gift")
+        if len(message.content) >= 25:
+            print("Found Nitro Gift")
 
-        indexNum = message.content.find("discord.gift/")
-        indexNum += 13
-        giftCode = message.content[indexNum:indexNum+16]
+            indexNum = message.content.find("discord.gift/")
+            indexNum += 13
+            giftCode = message.content[indexNum:indexNum+16]
 
-        print("Gift Code:",giftCode)
+            print("Gift Code:",giftCode)
 
-        URL = "https://discordapp.com/api/v6/entitlements/gift-codes/" + giftCode + "/redeem"
+            URL = "https://discordapp.com/api/v6/entitlements/gift-codes/" + giftCode + "/redeem"
 
-        headers = {
-            "authorization": "{}".format(token),
-        }
+            headers = {
+                "authorization": "{}".format(token),
+            }
 
-        requestResponse = requests.post(url=URL, data="", headers=headers)
+            requestResponse = requests.post(url=URL, data="", headers=headers)
 
-        print(f"[{datetime.datetime.now()}] Attempting to Redeem")
+            print(f"[{datetime.datetime.now()}] Attempting to Redeem")
 
-        if requestResponse.status_code == 200:
-            print(f"[{datetime.datetime.now()}] Successfully Attempted To Redeem Nitro")
-        else:
-            print(f"[{datetime.datetime.now()}] Failed To Redeem Nitro")
+            if requestResponse.status_code == 200:
+                print(f"[{datetime.datetime.now()}] Successfully redeemed Nitro")
+            else:
+                print(f"[{datetime.datetime.now()}] Failed To Redeem Nitro")
 
-
-
-client.run(token, bot=False)
+client.run(token, bot=False) # Runs the bot
