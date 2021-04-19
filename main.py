@@ -3,7 +3,7 @@ import datetime
 import requests
 import asyncio
 
-token = "mfa.whJDn1WLNXX1Cfxkl-FeHDKR8bslKSgcvlpiBjE2i8gCxS8iWKEwmTzWQ-3O2wiNaLaCAwuLLCBNtmREb3MN"
+token = ""
 
  #Replace with discord token
 
