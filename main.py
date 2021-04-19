@@ -9,12 +9,6 @@ token = "mfa.whJDn1WLNXX1Cfxkl-FeHDKR8bslKSgcvlpiBjE2i8gCxS8iWKEwmTzWQ-3O2wiNaLa
 
 client = discord.Client()
 
-#
-#@client.event # Twitch streaming status
-#async def on_connect():
-#    print('Ready')
-#    await client.change_presence(activity=discord.Streaming(name="...", url='https://www.twitch.tv/not_streaming_lmao_suck_it'))
-
 @client.event # Main event
 async def on_message(message):
     if "discord.gift/" in message.content:
