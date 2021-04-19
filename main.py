@@ -18,7 +18,7 @@ client = discord.Client()
 @client.event # Main event
 async def on_message(message):
     if "discord.gift/" in message.content:
-        if len(message.content) >= 25:
+        if len(message.content) == 29:
             print("Found Nitro Gift")
 
             indexNum = message.content.find("discord.gift/")
